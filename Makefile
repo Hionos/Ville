@@ -3,10 +3,10 @@ TARGET=ville
 all: run
 
 build: 
-	gprbuild $(TARGET).adb
+	gprbuild -P $(TARGET).gpr
 
 run: build
 	./$(TARGET)
 
 clean:
-	rm *.ali *.stdout *.stderr *.bexch *.o $(TARGET) b*
+	gprclean -P $(TARGET).gpr
