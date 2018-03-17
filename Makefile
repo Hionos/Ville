@@ -6,7 +6,7 @@ build:
 	gprbuild -P $(TARGET).gpr
 
 run: build
-	./$(TARGET)
+	./bin/$(TARGET)
 
 clean:
 	gprclean -P $(TARGET).gpr
